@@ -1,10 +1,13 @@
 import 'package:associa_med_app/contract/service.dart';
+import 'package:associa_med_app/models/user.dart';
 import 'package:associa_med_app/services/remote/user_service.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+Future<void> main() async {
   UserService userService = new UserService();
-  print( userService.getUser() );
+
+
+  await userService.remove("11");
   runApp(MyApp());
 }
 

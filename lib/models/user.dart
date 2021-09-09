@@ -4,13 +4,14 @@
 
 import 'dart:convert';
 
+import 'package:associa_med_app/contract/model.dart';
 import 'package:flutter/cupertino.dart';
 
 
 
 
 
-class User {
+class User extends Model{
   User({
     required this.firstName,
     required this.lastName,
