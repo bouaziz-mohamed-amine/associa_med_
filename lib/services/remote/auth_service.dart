@@ -17,4 +17,12 @@ class AuthService extends GetConnect {
  // Future<User> login(){
  //   return
  // }
+
+ Future<void> logout()async {
+   final box = GetStorage();
+   String token = box.read("token");
+   final headers = {'Authorization': 'Bearer $token'};
+   Response response = await post(AuthApi().logoutUrl(), null,headers: headers );
+   print(response.body);
+ }
 }
