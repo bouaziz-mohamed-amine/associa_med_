@@ -5,8 +5,9 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 class AuthService extends GetConnect {
- Future<User> register(User user ) async{
-    final box = GetStorage();
+  final box = GetStorage();
+
+  Future<User> register(User user ) async{
 
    print (user.email);
    print(user.toJson());
@@ -14,13 +15,15 @@ class AuthService extends GetConnect {
     box.write("token", response.body["token"]);
     return User.fromJson(response.body["user"]);
 }
- // Future<User> login(){
- //   return
- // }
+ Future<User> login(User user) async{
+   Response response = await post(AuthApi().loginUrl(),{"email": user.email, "password": user.password});
+   box.write("token", response.body["token"]);
+   return User.fromJson(response.body["user"]);
+ }
 
  Future<void> logout()async {
-   final box = GetStorage();
    String token = box.read("token");
+
    final headers = {'Authorization': 'Bearer $token'};
    Response response = await post(AuthApi().logoutUrl(), null,headers: headers );
    print(response.body);

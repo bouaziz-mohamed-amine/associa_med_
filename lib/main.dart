@@ -14,7 +14,7 @@ Future<void> main() async {
   AuthService authService = AuthService();
 
   User user = User(firstName: "mohamed",lastName: "derwich",  email: "ddddeevaA@.dev", password: "azerty");
-  await authService.register(user);
+  await authService.login(user);
   print(box.read("token"));
   await authService.logout();
   runApp(MyApp());
