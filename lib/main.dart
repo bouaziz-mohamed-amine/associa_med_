@@ -1,13 +1,21 @@
 import 'package:associa_med_app/contract/service.dart';
 import 'package:associa_med_app/models/user.dart';
+import 'package:associa_med_app/services/remote/auth_service.dart';
 import 'package:associa_med_app/services/remote/user_service.dart';
 import 'package:flutter/material.dart';
+import 'package:get_storage/get_storage.dart';
 
 Future<void> main() async {
+  await GetStorage.init();
+  final box = GetStorage();
+
+
   UserService userService = new UserService();
+  AuthService authService = AuthService();
 
-
-  await userService.remove("11");
+  User user = User(firstName: "mohamed",lastName: "derwich",  email: "dddevaA@.dev", password: "azerty"   );
+  await authService.register(user);
+  print(box.read("token"));
   runApp(MyApp());
 }
 
