@@ -7,7 +7,7 @@ import 'package:get/get_connect/http/src/response/response.dart';
 
 class UserService extends Service{
   @override
-  Future<Model> create(Map<String, dynamic> data) {
+  Future<Model> create(Model model) {
     // TODO: implement create
     throw UnimplementedError();
   }

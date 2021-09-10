@@ -8,7 +8,7 @@ abstract class Service extends GetConnect{
 
   Future<Model> findOne(String id) ;
 
-  Future<Model> create(Map<String,dynamic> data) ;
+  Future<Model> create(Model model) ;
 
   Future<Model> update(Model model) ;
 

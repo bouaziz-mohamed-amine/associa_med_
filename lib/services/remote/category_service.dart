@@ -3,7 +3,7 @@ import 'package:associa_med_app/contract/service.dart';
 
 class CategoryService extends Service{
   @override
-  Future<Model> create(Map<String, dynamic> data) {
+  Future<Model> create(Model model) {
     // TODO: implement create
     throw UnimplementedError();
   }

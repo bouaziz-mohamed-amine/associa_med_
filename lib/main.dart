@@ -1,6 +1,8 @@
 import 'package:associa_med_app/contract/service.dart';
+import 'package:associa_med_app/models/experience.dart';
 import 'package:associa_med_app/models/user.dart';
 import 'package:associa_med_app/services/remote/auth_service.dart';
+import 'package:associa_med_app/services/remote/experience_service.dart';
 import 'package:associa_med_app/services/remote/user_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
@@ -12,10 +14,13 @@ Future<void> main() async {
 
   UserService userService = new UserService();
   AuthService authService = AuthService();
+  ExperienceService experienceService =  ExperienceService();
+  // List<Experience> experiences =  await experienceService.find() as List<Experience>;
 
-  User user = User(firstName: "mohamed",lastName: "derwich",  email: "ddddeevaA@.dev", password: "azerty");
-  await authService.login(user);
+  User user = User(firstName: "mohamed",lastName: "derwich",  email: "ddafddafafafadddssssdeevaA@.dev", password: "azerty");
+  // await authService.login(user);
   print(box.read("token"));
+  // experienceService.find();
   await authService.logout();
   runApp(MyApp());
 }
@@ -93,20 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
+
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
@@ -116,6 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+
           ],
         ),
       ),
