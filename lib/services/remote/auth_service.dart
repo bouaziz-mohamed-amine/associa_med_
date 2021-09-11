@@ -9,15 +9,19 @@ class AuthService extends GetConnect {
 
   Future<User> register(User user ) async{
 
+
+    Response response = await post(AuthApi().registerUrl() , user.toJson());
    print (user.email);
    print(user.toJson());
-    Response response = await post(AuthApi().registerUrl() , user.toJson());
     box.write("token", response.body["token"]);
     return User.fromJson(response.body["user"]);
 }
- Future<User> login(User user) async{
-   Response response = await post(AuthApi().loginUrl(),{"email": user.email, "password": user.password});
-   box.write("token", response.body["token"]);
+ Future<User> login(String email , String password) async{
+
+   Response response = await post(AuthApi().loginUrl(),{"email": email, "password": password});
+
+    box.write("token", response.body["token"]);
+
    return User.fromJson(response.body["user"]);
  }
 

@@ -1,7 +1,7 @@
 import 'package:associa_med_app/contract/controller.dart';
-import 'package:associa_med_app/contract/service.dart';
+import 'package:associa_med_app/services/remote/user_service.dart';
 
 class UserController extends Controller{
-  UserController(Service service) : super(service);
+  UserService _userService = UserService();
 
 }

@@ -10,6 +10,6 @@ abstract class Page extends GetPage{
 
   GetPage getPage(){
 
-    return GetPage(name: _name, binding: _binding,middlewares: _middlewares, page: () => _view );
+    return GetPage(name: _name, binding: _binding,middlewares: middlewares, page: () => _view );
   }
 }
