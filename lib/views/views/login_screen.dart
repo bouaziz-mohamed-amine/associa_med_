@@ -1,4 +1,5 @@
 import 'package:associa_med_app/controllers/auth_controller.dart';
+import 'package:associa_med_app/routes/app_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
@@ -173,8 +174,13 @@ class LoginScreen extends GetView<AuthController> {
                             bottomRight: Radius.circular(35))),
                     child: InkWell(
                       onTap: (){
-                         controller.login();
-                         Get.toNamed('/home');
+                        controller.login();
+                        if(controller.box.read("token") !=null){
+                          Get.toNamed(AppRoute().homePageRoute);
+
+                        }
+
+
 
                       },
                       child: Row(
@@ -188,6 +194,8 @@ class LoginScreen extends GetView<AuthController> {
                             ),
                             onTap: (){
                                controller.login();
+                               Get.toNamed(AppRoute().homePageRoute);
+
                             },
                           ),
                           SizedBox(
