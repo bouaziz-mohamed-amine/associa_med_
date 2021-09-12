@@ -1,4 +1,5 @@
 import 'package:associa_med_app/controllers/user_controller.dart';
+import 'package:associa_med_app/routes/app_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -15,6 +16,13 @@ class HomeScreen extends GetView<UserController>{
         child: Column(
           children: [
             Text(            controller.getCurrentUser().email
+            ),
+            ElevatedButton(
+                onPressed: (){
+                  controller.logout();
+                  Get.offNamed(AppRoute().loginRoute);
+                },
+                child: Text("logout")
             )
 
           ],

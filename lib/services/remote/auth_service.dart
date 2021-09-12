@@ -43,6 +43,7 @@ class AuthService extends GetConnect {
 
    final headers = {'Authorization': 'Bearer $token'};
    Response response = await post(AuthApi().logoutUrl(), null,headers: headers );
+   box.remove("token");
    print(response.body);
  }
 }

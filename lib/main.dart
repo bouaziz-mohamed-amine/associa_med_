@@ -20,7 +20,12 @@ void main() async{
   runApp(GetMaterialApp(
     // It is not mandatory to use named routes, but dynamic urls are interesting.
     initialRoute: AppRoute().loginRoute,
-    defaultTransition: Transition.native,
+    enableLog: true,
+    defaultTransition: Transition.fade,
+    opaqueRoute: Get.isOpaqueRouteDefault,
+    popGesture: Get.isPopGestureEnable,
+    // defaultTransition: Transition.native,
+
     getPages: [
       //Simple GetPage
       LoginPage(),

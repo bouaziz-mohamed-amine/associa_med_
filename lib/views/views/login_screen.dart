@@ -173,10 +173,10 @@ class LoginScreen extends GetView<AuthController> {
                             bottomLeft: Radius.circular(25),
                             bottomRight: Radius.circular(35))),
                     child: InkWell(
-                      onTap: (){
-                        controller.login();
+                      onTap: () async{
+                        await controller.login();
                         if(controller.box.read("token") !=null){
-                          Get.toNamed(AppRoute().homePageRoute);
+                          Get.offNamed(AppRoute().homePageRoute);
 
                         }
 
