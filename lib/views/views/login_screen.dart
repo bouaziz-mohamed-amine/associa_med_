@@ -151,9 +151,11 @@ class LoginScreen extends GetView<AuthController> {
             Align(
               alignment: Alignment.bottomLeft,
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  Get.offNamed(AppRoute().registerRoute);
+                },
                 child: Text(
-                  'Forgot Password? ',
+                  'Register? ',
                   style: TextStyle(color: controller.yellowColor),
                 ),
               ),

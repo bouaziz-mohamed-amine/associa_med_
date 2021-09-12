@@ -11,11 +11,16 @@ class AuthController extends GetxController{
   AuthService _authService = AuthService();
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
+  TextEditingController _firstNameController = TextEditingController();
+  TextEditingController _lastNameController = TextEditingController();
+  TextEditingController _cinNumberController = TextEditingController();
   Color _yellowColor = Color(0xFFF7C41C);
   var _key = GlobalKey<FormState>();
   final box = GetStorage();
 
   get key => _key;
+
+  TextEditingController get firstNameController => _firstNameController;
 
   Color get yellowColor => _yellowColor;
 
@@ -44,9 +49,11 @@ class AuthController extends GetxController{
   }
 
   Future<void> register() async{
-    User user = User(firstName: "dad", lastName: "dad", email: emailController.text, password: passwordController.text);
+    User user = User(firstName: firstNameController.text, lastName: lastNameController.text,cin: cinNumberController.text, email: emailController.text, password: passwordController.text);
     await authService.register(user);
   }
 
+  TextEditingController get lastNameController => _lastNameController;
 
+  TextEditingController get cinNumberController => _cinNumberController;
 }

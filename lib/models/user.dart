@@ -56,8 +56,8 @@ class User extends Model {
         "birthdate": birthdate,
         "address": address,
         "study": study,
-        "updated_at": updatedAt.toString(),
-        "created_at": createdAt.toString(),
+        "updated_at": DateTime.now().toString(),
+        "created_at": DateTime.now().toString(),
         "id": id,
       };
 }

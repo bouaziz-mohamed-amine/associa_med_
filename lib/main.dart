@@ -5,6 +5,7 @@ import 'package:associa_med_app/services/remote/auth_service.dart';
 import 'package:associa_med_app/services/remote/user_service.dart';
 import 'package:associa_med_app/views/pages/home_page.dart';
 import 'package:associa_med_app/views/pages/login_page.dart';
+import 'package:associa_med_app/views/pages/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -29,7 +30,8 @@ void main() async{
     getPages: [
       //Simple GetPage
       LoginPage(),
-      HomePage()
+      HomePage(),
+      RegisterPage()
 
     ],
   ));
