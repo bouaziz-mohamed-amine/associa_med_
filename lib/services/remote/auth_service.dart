@@ -1,7 +1,7 @@
 import 'package:associa_med_app/contract/model.dart';
 import 'package:associa_med_app/exception/exception.dart';
 import 'package:associa_med_app/models/user.dart';
-import 'package:associa_med_app/services/remote/api/auth_api.dart';
+import 'package:associa_med_app/services/remote/api_url/auth_api_url.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
@@ -11,7 +11,7 @@ class AuthService extends GetConnect {
   Future<User> register(User user ) async{
 
 
-    Response response = await post(AuthApi().registerUrl() , user.toJson());
+    Response response = await post(AuthApiUrl().registerUrl() , user.toJson());
    print (user.email);
    print(user.toJson());
     box.write("token", response.body["token"]);
@@ -20,7 +20,7 @@ class AuthService extends GetConnect {
 }
  Future<User> login(String email , String password) async{
 
-   Response response = await post(AuthApi().loginUrl(),{"email": email, "password": password});
+   Response response = await post(AuthApiUrl().loginUrl(),{"email": email, "password": password});
    switch (response.statusCode){
      case 200:
      case 201:
@@ -42,7 +42,7 @@ class AuthService extends GetConnect {
    String token = box.read("token");
 
    final headers = {'Authorization': 'Bearer $token'};
-   Response response = await post(AuthApi().logoutUrl(), null,headers: headers );
+   Response response = await post(AuthApiUrl().logoutUrl(), null,headers: headers );
    box.remove("token");
    print(response.body);
  }

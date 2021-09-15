@@ -1,6 +1,7 @@
-import 'package:associa_med_app/services/remote/api/main_api.dart';
 
-class AuthApi extends MainApi{
+import 'main_api_url.dart';
+
+class AuthApiUrl extends MainApiUrl{
 
   String registerUrl() => mainUrl + "register"  ;
 

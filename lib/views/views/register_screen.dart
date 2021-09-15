@@ -158,11 +158,10 @@ class RegisterScreen extends GetView<AuthController> {
                     ElevatedButton(
                       onPressed: () async{
                               await controller.register();
-                              if(controller.box.read("token") !=null){
-                                Get.offNamed(AppRoute().homePageRoute);
 
-                              }
-                      },
+
+                              },
+
                       child: Text("register"),
                     ),
 

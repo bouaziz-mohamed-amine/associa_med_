@@ -1,9 +1,10 @@
 
 
-import 'package:associa_med_app/services/remote/api/main_api.dart';
 
-class UserApi extends MainApi{
-  String _UsersUrl = MainApi().mainUrl +'user/all';
+import 'main_api_url.dart';
+
+class UserApiUrl extends MainApiUrl{
+  String _UsersUrl = MainApiUrl().mainUrl +'user/all';
 
   String get UsersUrl => _UsersUrl;
 

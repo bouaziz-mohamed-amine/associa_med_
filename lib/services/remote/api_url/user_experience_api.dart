@@ -1,6 +1,7 @@
-import 'package:associa_med_app/services/remote/api/main_api.dart';
 
-class UserExperienceApi extends MainApi{
+import 'main_api_url.dart';
+
+class UserExperienceApiUrl extends MainApiUrl{
   String showExperiencesUrl() => mainUrl + "experience/all" ;
   String createExperienceUrl() => mainUrl + "experience/create";
   String updateExperienceUrl(String id) => mainUrl + "update/" + id;

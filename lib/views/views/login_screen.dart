@@ -5,7 +5,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 
 class LoginScreen extends GetView<AuthController> {
-
+  final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return
@@ -19,6 +19,12 @@ class LoginScreen extends GetView<AuthController> {
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              MaterialButton(
+                color: Colors.amber,
+                  child: Text("datda data "),
+                  onPressed: (){
+
+              }),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 32),
                 child: Text(
@@ -86,7 +92,7 @@ class LoginScreen extends GetView<AuthController> {
         child: Stack(
           children: <Widget>[
             Form(
-              key: controller.key,
+              key: _formKey,
               child: Column(
                 children: <Widget>[
                   TextFormField(
@@ -152,7 +158,9 @@ class LoginScreen extends GetView<AuthController> {
               alignment: Alignment.bottomLeft,
               child: InkWell(
                 onTap: () {
+
                   Get.offNamed(AppRoute().registerRoute);
+
                 },
                 child: Text(
                   'Register? ',
@@ -177,28 +185,20 @@ class LoginScreen extends GetView<AuthController> {
                     child: InkWell(
                       onTap: () async{
                         await controller.login();
-                        if(controller.box.read("token") !=null){
-                          Get.offNamed(AppRoute().homePageRoute);
+
 
                         }
 
 
 
-                      },
+                      ,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
-                          InkWell(
-                            child: Text(
-                              'LOGIN',
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                            onTap: (){
-                               controller.login();
-                               Get.toNamed(AppRoute().homePageRoute);
-
-                            },
+                          Text(
+                            'LOGIN',
+                            style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           SizedBox(
                             width: 8,
