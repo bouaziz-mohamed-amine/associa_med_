@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 
+
 class LoginScreen extends GetView<AuthController> {
   final _formKey = GlobalKey<FormState>();
   @override
@@ -15,68 +16,72 @@ class LoginScreen extends GetView<AuthController> {
             elevation: 0,
           ),
           backgroundColor: Colors.transparent,
-          body: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              MaterialButton(
-                color: Colors.amber,
-                  child: Text("datda data "),
-                  onPressed: (){
+          body:
 
-              }),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 32),
-                child: Text(
-                  'Welcome back!',
-                  style: TextStyle(
-                      letterSpacing: 1.3,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 32),
-                ),
-              ),
-              SizedBox(
-                height: 8,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32),
-                child: Text(
-                  'Sign in to your account',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-              SizedBox(
-                height: 8,
-              ),
-              _form(context),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Text(
-                    "Don't have an account?",
-                    style: TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.w500),
-                  ),
-                  // ignore: deprecated_member_use
-                  FlatButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Create One',
+          Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    MaterialButton(
+                        color: Colors.amber,
+                        child: Text("datda data "),
+                        onPressed: (){
 
-                      style: TextStyle(
-                          decoration: TextDecoration.underline,
-                          color: Colors.white, fontWeight: FontWeight.w500),
+                        }),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 32),
+                      child: Text(
+                        'Welcome back!',
+                        style: TextStyle(
+                            letterSpacing: 1.3,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 32),
+                      ),
                     ),
-                  )
-                ],
-              ),
-              SizedBox(height: 48,)
-            ],
-          ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 32),
+                      child: Text(
+                        'Sign in to your account',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    _form(context),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          "Don't have an account?",
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.w500),
+                        ),
+                        // ignore: deprecated_member_use
+                        FlatButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Create One',
+
+                            style: TextStyle(
+                                decoration: TextDecoration.underline,
+                                color: Colors.white, fontWeight: FontWeight.w500),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(height: 48,)
+                  ],
+                ),
+
+
+        
         );
-    throw UnimplementedError();
   }
 
   Widget _form(BuildContext context) {
@@ -217,4 +222,5 @@ class LoginScreen extends GetView<AuthController> {
     );
   }
 
+  
 }

@@ -13,6 +13,13 @@ import 'package:get_storage/get_storage.dart';
 void main() async{
   await GetStorage.init();
   final box = GetStorage();
+  UserService userService = UserService();
+  AuthService authService = AuthService();
+   User user = await userService.findOne("56");
+  user.firstName ="salah";
+
+  userService.update(user);
+
   // User user = box.read("current_user");
   // print(user);
   // print(user.firstName);
