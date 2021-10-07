@@ -8,5 +8,4 @@ import 'package:get/get_state_manager/src/simple/get_view.dart';
 
 class HomePage extends Page{
   HomePage() : super(AppRoute().homePageRoute, HomeBinding(),[], HomeScreen());
-
 }
