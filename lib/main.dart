@@ -3,6 +3,7 @@ import 'package:associa_med_app/models/user.dart';
 import 'package:associa_med_app/routes/app_route.dart';
 import 'package:associa_med_app/services/remote/auth_service.dart';
 import 'package:associa_med_app/services/remote/user_service.dart';
+import 'package:associa_med_app/views/components/theme.dart';
 import 'package:associa_med_app/views/pages/home_page.dart';
 import 'package:associa_med_app/views/pages/login_page.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,8 @@ void main() async{
 
 
   runApp(GetMaterialApp(
+    debugShowCheckedModeBanner: false,
+    theme: AppTheme.appTheme,
     // It is not mandatory to use named routes, but dynamic urls are interesting.
     initialRoute: AppRoute().loginRoute,
     enableLog: true,
