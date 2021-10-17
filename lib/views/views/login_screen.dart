@@ -1,6 +1,9 @@
 import 'package:associa_med_app/controllers/auth_controller.dart';
 import 'package:associa_med_app/routes/app_route.dart';
 import 'package:associa_med_app/views/components/Utilities/Continue.dart';
+import 'package:associa_med_app/views/components/Utilities/NewsPost.dart';
+import 'package:associa_med_app/views/components/Utilities/SponsorsGrid.dart';
+import 'package:associa_med_app/views/components/Utilities/cardComity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
@@ -17,7 +20,7 @@ String title = 'Excepteur sint occaecat cupidatat non proident.';
             title: Text('I am el Mr '),
             elevation: 1,
           ),
-          body: ComityPost(title,desc,context),
+          body: NewsPost(title, desc, context),
           //bottomNavigationBar: ContinueButton(Text("Continue")),
         );
   }
