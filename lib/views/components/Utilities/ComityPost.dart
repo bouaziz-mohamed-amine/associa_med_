@@ -6,23 +6,19 @@ import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 
 Widget ComityPost(String header,String description ,BuildContext context){
-  return Center(
-    child: Card(
-      borderOnForeground: true,
+  return Card(
+    borderOnForeground: true,
+    child : Container(
+      padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width*0.05),
       child: Column(
         children: [
+          Text('Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim. ',
+              style: TextStyle(color: AppTheme.appTheme.buttonColor,fontWeight:FontWeight.bold,fontSize: 15,)),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim. ',style: TextStyle(color: AppTheme.appTheme.buttonColor,fontWeight:FontWeight.bold,fontSize: 15 )),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
                 color: AppTheme.appTheme.secondaryHeaderColor,
-                width: MediaQuery.of(context).size.width * 0.24,
+                width: MediaQuery.of(context).size.width * 0.5,
                 height: MediaQuery.of(context).size.height * 0.28,
               ),
               SizedBox(
@@ -32,16 +28,16 @@ Widget ComityPost(String header,String description ,BuildContext context){
                 children: [
                   Container(
                     color: AppTheme.appTheme.secondaryHeaderColor,
-                    width: MediaQuery.of(context).size.width * 0.24,
-                    height: MediaQuery.of(context).size.height * 0.13,
+                    width: MediaQuery.of(context).size.width * 0.35,
+                    height: MediaQuery.of(context).size.height * 0.135,
                   ),
                   SizedBox(
-                    height:MediaQuery.of(context).size.height * 0.02,
+                    height:MediaQuery.of(context).size.height * 0.01,
                   ),
                   Container(
                     color: AppTheme.appTheme.secondaryHeaderColor,
-                    width: MediaQuery.of(context).size.width * 0.24,
-                    height: MediaQuery.of(context).size.height * 0.13,
+                    width: MediaQuery.of(context).size.width * 0.35,
+                    height: MediaQuery.of(context).size.height * 0.135,
                   ),
                 ],
               )
@@ -76,7 +72,8 @@ Widget ComityPost(String header,String description ,BuildContext context){
             ],
           )
         ],
-      ),
+      ) ,
     ),
   );
+
 }

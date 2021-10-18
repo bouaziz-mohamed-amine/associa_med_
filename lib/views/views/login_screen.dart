@@ -20,7 +20,7 @@ String title = 'Excepteur sint occaecat cupidatat non proident.';
             title: Text('I am el Mr '),
             elevation: 1,
           ),
-          body: NewsPost(title, desc, context),
+          body: ComityPost(title, desc, context),
           //bottomNavigationBar: ContinueButton(Text("Continue")),
         );
   }
