@@ -10,7 +10,7 @@ class HomeScreen extends GetView<UserController>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home Page"),
+        title: Text("Home"),
       ),
       body: Container(
         child: Column(
