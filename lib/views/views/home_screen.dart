@@ -1,5 +1,6 @@
 import 'package:associa_med_app/controllers/user_controller.dart';
 import 'package:associa_med_app/routes/app_route.dart';
+import 'package:associa_med_app/views/components/utilities/who_are_we.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -15,6 +16,8 @@ class HomeScreen extends GetView<UserController> {
       body: Container(
         child: Column(
           children: [
+            WhoWeAre(),
+
             Text(controller.getCurrentUser().email),
             ElevatedButton(
                 onPressed: () {

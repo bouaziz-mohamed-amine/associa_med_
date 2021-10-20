@@ -3,6 +3,7 @@ import 'package:associa_med_app/models/user.dart';
 import 'package:associa_med_app/routes/app_route.dart';
 import 'package:associa_med_app/services/remote/auth_service.dart';
 import 'package:associa_med_app/services/remote/user_service.dart';
+import 'package:associa_med_app/views/components/utilities/who_are_we.dart';
 import 'package:associa_med_app/views/pages/home_page.dart';
 import 'package:associa_med_app/views/pages/login_page.dart';
 import 'package:associa_med_app/views/pages/register_page.dart';
@@ -11,14 +12,14 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 void main() async{
-  await GetStorage.init();
-  final box = GetStorage();
-  UserService userService = UserService();
-  AuthService authService = AuthService();
-   User user = await userService.findOne("56");
-  user.firstName ="salah";
-
-  userService.update(user);
+  // await GetStorage.init();
+  // final box = GetStorage();
+  // UserService userService = UserService();
+  // AuthService authService = AuthService();
+  //  User user = await userService.findOne("56");
+  // user.firstName ="salah";
+  //
+  // userService.update(user);
 
   // User user = box.read("current_user");
   // print(user);
@@ -27,7 +28,7 @@ void main() async{
 
   runApp(GetMaterialApp(
     // It is not mandatory to use named routes, but dynamic urls are interesting.
-    initialRoute: AppRoute().loginRoute,
+    initialRoute: "/login",
     enableLog: true,
     defaultTransition: Transition.fade,
     opaqueRoute: Get.isOpaqueRouteDefault,
@@ -39,6 +40,7 @@ void main() async{
       LoginPage(),
       HomePage(),
       RegisterPage()
+      // GetPage(name: '/', page: () => WhoWeAre())
 
     ],
   ));

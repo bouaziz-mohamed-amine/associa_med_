@@ -10,6 +10,7 @@ class AuthService extends GetConnect {
 
   Future<User> register(User user) async {
     Response response = await post(AuthApiUrl().registerUrl(), user.toJson());
+    print("hello");
 
     switch (response.statusCode) {
       case 200:
