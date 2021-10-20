@@ -9,31 +9,6 @@ class LoginFailed implements Exception{
     return 'credentials rejected';
   }
 }
-
-
-class LogoutFailed implements Exception{
-  String error;
-
-  LogoutFailed(this.error);
-
-  @override
-  String toString() {
-    return 'credentials rejected';
-  }
-}
-
-
-class RegisterFailed implements Exception{
-  String error;
-
-  RegisterFailed(this.error);
-
-  @override
-  String toString() {
-    return 'Register data rejected and ${error}';
-  }
-}
-
 class RedirectionFound implements Exception{
 
 

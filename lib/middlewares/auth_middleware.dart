@@ -1,12 +1,7 @@
-import 'package:associa_med_app/controllers/auth_controller.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class AuthMiddleware implements GetMiddleware{
-
-  final authController = Get.find<AuthController>();
-
-
   @override
   int? priority;
 
@@ -18,6 +13,7 @@ class AuthMiddleware implements GetMiddleware{
 
   @override
   GetPageBuilder? onPageBuildStart(GetPageBuilder? page) {
+    // TODO: implement onPageBuildStart
     throw UnimplementedError();
   }
 
@@ -40,10 +36,7 @@ class AuthMiddleware implements GetMiddleware{
 
   @override
   RouteSettings? redirect(String? route) {
-    // ignore: deprecated_member_use
-    return ! authController.emailController.isNull || route == '/login'
-        ? null
-        : RouteSettings(name: '/login');
+    // TODO: implement redirect
     throw UnimplementedError();
   }
 

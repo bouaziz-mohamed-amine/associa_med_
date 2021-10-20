@@ -25,7 +25,6 @@ dependencies:
     sdk: flutter
   get: ^4.3.8
   get_storage:
-  dcdg: ^3.1.1
 
 
 
@@ -36,7 +35,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  connectivity: ^3.0.6
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

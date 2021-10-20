@@ -4,9 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 
-
 class LoginScreen extends GetView<AuthController> {
-  final _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return
@@ -16,72 +15,62 @@ class LoginScreen extends GetView<AuthController> {
             elevation: 0,
           ),
           backgroundColor: Colors.transparent,
-          body:
-
-          Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    MaterialButton(
-                        color: Colors.amber,
-                        child: Text("datda data "),
-                        onPressed: (){
-
-                        }),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 32),
-                      child: Text(
-                        'Welcome back!',
-                        style: TextStyle(
-                            letterSpacing: 1.3,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 32),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 32),
-                      child: Text(
-                        'Sign in to your account',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    _form(context),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text(
-                          "Don't have an account?",
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.w500),
-                        ),
-                        // ignore: deprecated_member_use
-                        FlatButton(
-                          onPressed: () {},
-                          child: Text(
-                            'Create One',
-
-                            style: TextStyle(
-                                decoration: TextDecoration.underline,
-                                color: Colors.white, fontWeight: FontWeight.w500),
-                          ),
-                        )
-                      ],
-                    ),
-                    SizedBox(height: 48,)
-                  ],
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 32),
+                child: Text(
+                  'Welcome back!',
+                  style: TextStyle(
+                      letterSpacing: 1.3,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 32),
                 ),
+              ),
+              SizedBox(
+                height: 8,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 32),
+                child: Text(
+                  'Sign in to your account',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+              SizedBox(
+                height: 8,
+              ),
+              _form(context),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    "Don't have an account?",
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.w500),
+                  ),
+                  // ignore: deprecated_member_use
+                  FlatButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Create One',
 
-
-        
+                      style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          color: Colors.white, fontWeight: FontWeight.w500),
+                    ),
+                  )
+                ],
+              ),
+              SizedBox(height: 48,)
+            ],
+          ),
         );
+    throw UnimplementedError();
   }
 
   Widget _form(BuildContext context) {
@@ -97,7 +86,7 @@ class LoginScreen extends GetView<AuthController> {
         child: Stack(
           children: <Widget>[
             Form(
-              key: _formKey,
+              key: controller.key,
               child: Column(
                 children: <Widget>[
                   TextFormField(
@@ -162,13 +151,9 @@ class LoginScreen extends GetView<AuthController> {
             Align(
               alignment: Alignment.bottomLeft,
               child: InkWell(
-                onTap: () {
-
-                  Get.offNamed(AppRoute().registerRoute);
-
-                },
+                onTap: () {},
                 child: Text(
-                  'Register? ',
+                  'Forgot Password? ',
                   style: TextStyle(color: controller.yellowColor),
                 ),
               ),
@@ -190,20 +175,28 @@ class LoginScreen extends GetView<AuthController> {
                     child: InkWell(
                       onTap: () async{
                         await controller.login();
-
+                        if(controller.box.read("token") !=null){
+                          Get.offNamed(AppRoute().homePageRoute);
 
                         }
 
 
 
-                      ,
+                      },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
-                          Text(
-                            'LOGIN',
-                            style: TextStyle(fontWeight: FontWeight.bold),
+                          InkWell(
+                            child: Text(
+                              'LOGIN',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            onTap: (){
+                               controller.login();
+                               Get.toNamed(AppRoute().homePageRoute);
+
+                            },
                           ),
                           SizedBox(
                             width: 8,
@@ -222,5 +215,4 @@ class LoginScreen extends GetView<AuthController> {
     );
   }
 
-  
 }
