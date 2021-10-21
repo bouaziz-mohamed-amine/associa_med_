@@ -31,6 +31,9 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  url_launcher: ^6.0.12
+  youtube_player_flutter: ^8.0.0
+
 
 dev_dependencies:
   flutter_test:
@@ -67,6 +70,13 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+  fonts:
+    - family: MyFlutterApp
+      fonts:
+        - asset: Assets/icons/MyFlutterApp.ttf
+    - family: MyriadPro
+      fonts:
+        - asset: Assets/fonts/MyriadProRegular.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:
