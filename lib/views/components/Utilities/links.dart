@@ -1,7 +1,7 @@
 
 import 'dart:io';
 
-import 'package:associa_med_app/views/assets/db_icons.dart';
+import 'package:associa_med_app/views/components/assets/db_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
