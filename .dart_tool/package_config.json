@@ -123,9 +123,9 @@
     },
     {
       "name": "path_provider",
-      "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.4",
+      "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.6",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.14"
     },
     {
       "name": "path_provider_linux",
@@ -165,9 +165,9 @@
     },
     {
       "name": "process",
-      "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/process-4.2.3",
+      "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/process-4.2.4",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.14"
     },
     {
       "name": "sky_engine",
@@ -261,7 +261,7 @@
     },
     {
       "name": "win32",
-      "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/win32-2.2.9",
+      "rootUri": "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/win32-2.2.10",
       "packageUri": "lib/",
       "languageVersion": "2.13"
     },
@@ -284,7 +284,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-10-31T09:48:56.339287Z",
+  "generated": "2021-10-31T10:45:47.692747Z",
   "generator": "pub",
   "generatorVersion": "2.14.4"
 }

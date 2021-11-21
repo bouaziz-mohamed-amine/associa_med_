@@ -67,9 +67,9 @@ path
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.0/
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.0/lib/
 path_provider
-2.12
-file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.4/
-file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.4/lib/
+2.14
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.6/
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.6/lib/
 path_provider_linux
 2.12
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.0/
@@ -95,9 +95,9 @@ plugin_platform_interface
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.0.2/
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.0.2/lib/
 process
-2.12
-file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/process-4.2.3/
-file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/process-4.2.3/lib/
+2.14
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/process-4.2.4/
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/process-4.2.4/lib/
 source_span
 2.12
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.8.1/
@@ -156,8 +156,8 @@ file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.0/
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.0/lib/
 win32
 2.13
-file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/win32-2.2.9/
-file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/win32-2.2.9/lib/
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/win32-2.2.10/
+file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/win32-2.2.10/lib/
 xdg_directories
 2.12
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/xdg_directories-0.2.0/
@@ -184,6 +184,6 @@ file:///C:/src/flutter/packages/flutter_web_plugins/
 file:///C:/src/flutter/packages/flutter_web_plugins/lib/
 associa_med_app
 2.12
-file:///E:/Associa%20Front%20Sprint%207/associa_med_fe/
-file:///E:/Associa%20Front%20Sprint%207/associa_med_fe/lib/
+file:///E:/project_flutter/associa_med_fe/
+file:///E:/project_flutter/associa_med_fe/lib/
 2
